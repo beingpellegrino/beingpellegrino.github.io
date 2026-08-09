@@ -288,7 +288,7 @@ function beacon(ep, c){
     var u = STAT_URL + (STAT_URL.indexOf("?") > -1 ? "&" : "?")
           + "k=" + encodeURIComponent(STAT_KEY)
           + "&ep=" + encodeURIComponent(ep)
-          + "&c=" + encodeURIComponent(c);
+          + "&ch=" + encodeURIComponent(c);
     /* 보내고 잊는다. 응답을 읽지 않고, 기다리지 않고, 실패해도 조용하다.
        보내는 것은 편 번호와 A/B 뿐이다 — 이름·쿠키·세션ID는 만들지도 않는다. */
     if (window.fetch) { fetch(u, {mode:"no-cors", keepalive:true}).catch(function(){}); }
